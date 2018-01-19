@@ -11,5 +11,5 @@ def square_number(val1):
     Type the correct code to square val1 after the return statement.
     TO GET CREDIT YOU MUST USE THE PYTHON BUILT-IN FUNCTIONALITY FOR SQUARING NUMBERS!
     '''
-    return 2 ** val1
+    return val1 ** 2
 
