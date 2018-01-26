@@ -21,13 +21,13 @@ def faculty_evaluation_result(nev, rar, som, oft, voft, alw):
 
     if voft_ratio + alw_ratio >= .9:
         return 'Excellent'
-    elif oft_ratio + voft_ratio + alw >= .8:
+    elif oft_ratio + voft_ratio + alw >= .8 and oft_ratio + voft_ratio + alw <.9:
         return 'Very Good'
-    elif som_ratio + oft_ratio + voft_ratio + alw_ratio >= .7:
+    elif som_ratio + oft_ratio + voft_ratio + alw_ratio >= .7 and som_ratio + oft_ratio + voft_ratio + alw_ratio <.8:
         return 'Good'
-    elif rar_ratio + som_ratio + oft_ratio + voft_ratio + alw_ratio >= .6:
+    elif rar_ratio + som_ratio + oft_ratio + voft_ratio + alw_ratio >=.6 and rar_ratio + som_ratio + oft_ratio + voft_ratio + alw_ratio <.7:
         return 'Needs Improvement'
-    elif rar_ratio + som_ratio + oft_ratio + voft_ratio + alw_ratio <= .6:
+    elif rar_ratio + som_ratio + oft_ratio + voft_ratio + alw_ratio <.6:
         return 'Unacceptable' 
 
 def get_ratings(nev,rar,som, oft,voft, alw):
@@ -45,6 +45,7 @@ def get_ratings(nev,rar,som, oft,voft, alw):
     ratings.append(round(nev / total, 2))
 
     return ratings
+    
     
 
     
