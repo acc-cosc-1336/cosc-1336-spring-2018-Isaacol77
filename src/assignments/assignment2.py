@@ -25,7 +25,7 @@ def faculty_evaluation_result(nev, rar, som, oft, voft, alw):
         return 'Very Good'
     elif som_ratio + oft_ratio + voft_ratio + alw_ratio >= .7 and som_ratio + oft_ratio + voft_ratio + alw_ratio <.8:
         return 'Good'
-    elif rar_ratio + som_ratio + oft_ratio + voft_ratio + alw_ratio >=.6 and rar_ratio + som_ratio + oft_ratio + voft_ratio + alw_ratio <.7:
+    elif rar_ratio + som_ratio + oft_ratio + voft_ratio + alw_ratio >=.6:
         return 'Needs Improvement'
     elif rar_ratio + som_ratio + oft_ratio + voft_ratio + alw_ratio <.6:
         return 'Unacceptable' 
