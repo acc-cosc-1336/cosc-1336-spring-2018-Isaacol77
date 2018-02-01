@@ -23,32 +23,30 @@ def get_time(hour, minutes, seconds, time_type, meridiem='AM'):
     '''
     time = ''
     #write decision structure code here
-    if time_type = 12 :
-        if hour < 1 or hour > 12:
-            return 'Invalid hour'
-        if minutes < 0 or minutes > 59:
-            return 'Invalid minutes'
-        if seconds < 0 or seconds > 59:
-            return 'Invalid seconds'
-    if time_type = 24 :
-        if hour < 0 or hour > 23:
-            return 'Invalid hour'
-        if minutes < 0 or minutes > 59:
-            return 'Invalid minutes'
-        if seconds < 0 or seconds > 59:
-            return 'Invalid seconds'
-    hour = 1, 2, 3, 4, 5, 6, 7, 8, 9
-    hour = "0" + str(hour)
-    minutes = 1, 2, 3, 4, 5, 6, 7, 8, 9
-    minutes = "0" + str(minute)
-    seconds = 1, 2, 3, 4, 5, 6, 7, 8, 9
-    seconds = "0" + str(seconds)
 
-    time = hours + minutes + seconds
-    print (time)
+    if time_type ==12 and (hour<1 or hour>12):
+        return 'Invalid hour'
+    if time_type ==24 and (hour<0 or hour>23):
+        return 'Invalid hour'
+    if seconds<0 or seconds>59:
+        return 'Invalid seconds'
+    if minutes<0 or minutes>59:
+        return 'Invalid minutes'
     
-           
+    if time_type == 12:
+        time = str(hour) + ':' + str(minutes)+ ':' + str(seconds) + ' ' + meridiem
+    if time_type == 24:
+        time = str(hour) + ':' + str(minutes) + ':' + str(seconds)
 
+    if hour == 1 or 2 or 3 or 4 or 5 or 6 or 7 or 8 or 9:
+        hour = '0' + str(hour)
+    if minutes == 1 or 2 or 3 or 4 or 5 or 6 or 7 or 8 or 9:
+        minutes = '0' + str(minutes)
+    if seconds == 1 or 2 or 3 or 4 or 5 or 6 or 7 or 8 or 9:
+        seconds = '0' + str(seconds) 
+
+
+        
     return  time
 
 def time_from_utc(utc_offset, utc_zero_time):
@@ -61,3 +59,4 @@ def time_from_utc(utc_offset, utc_zero_time):
     '''
 
     return (utc_zero_time + utc_offset) % 24
+
