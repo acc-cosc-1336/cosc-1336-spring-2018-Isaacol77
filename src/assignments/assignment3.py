@@ -103,9 +103,6 @@ def list_of_primes(n):
     '''
     primes = ''
     
-    whie (1,n):
-        current_value = 1
-        is_prime = n
         ?
         ?
         
