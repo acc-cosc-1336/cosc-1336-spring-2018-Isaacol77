@@ -103,8 +103,9 @@ def list_of_primes(n):
     '''
     primes = ''
     
-        ?
-        ?
+    for i in range(1, n):
+        if is_prime(i) == True:
+            primes = primes + str(i) + ','
         
         
     
